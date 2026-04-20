@@ -1,10 +1,10 @@
 {
-  "id": "mysnippets-plugin",
-  "name": "MySnippets",
-  "version": "1.2.3",
+  "id": "obsidian-mysnippets-plugins",
+  "name": "MySnippets (Fix)",
+  "version": "2.0.0",
   "minAppVersion": "0.15.3",
   "description": "MySnippets is a plugin that adds a status bar menu allowing the user to quickly toggle their snippets on and off 🖌.",
-  "author": "chetachi",
-  "authorUrl": "https://github.com/chetachiezikeuzor",
+  "author": "MachineYu",
+  "authorUrl": "https://github.com/yubolun",
   "isDesktopOnly": true
 }

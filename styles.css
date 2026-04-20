@@ -28,7 +28,7 @@ STATUS BAR MENU
 }
 
 .MySnippets-statusbar-menu {
-  width: 290px;
+  width: 340px;
   max-height: calc(100% - 90px);
 }
 
@@ -76,16 +76,18 @@ STATUS BAR MENU
   margin-right: 0;
   margin-left: 8px;
   display: flex;
-  background-color: var(--interactive-accent);
+  background-color: var(--interactive-accent) !important;
+  color: var(--text-on-accent) !important;
 }
 
 .MS-OpenSnippet svg {
   height: 1.35em;
   width: 1.35em;
+  color: var(--text-on-accent) !important;
 }
 
 .MS-OpenSnippet:hover {
-  background-color: var(--interactive-accent);
+  background-color: var(--interactive-accent-hover) !important;
 }
 
 .MySnippetsButton {
@@ -96,19 +98,21 @@ STATUS BAR MENU
   border-radius: 6px;
   display: flex;
   font-size: 12px !important;
+  background-color: var(--interactive-accent) !important;
+  color: var(--text-on-accent) !important;
 }
 
 .MySnippetsButton svg {
   height: 1.35em;
   margin: auto;
   width: 1.35em;
+  color: var(--text-on-accent) !important;
 }
 
-.MySnippetsButton.MS-Reload,
+.MySnippetsButton:hover,
 .MySnippetsButton.MS-Reload:hover,
-.MySnippetsButton.MS-Folder,
 .MySnippetsButton.MS-Folder:hover {
-  background-color: var(--interactive-accent);
+  background-color: var(--interactive-accent-hover) !important;
 }
 
 .MySnippets-statusbar-menu .menu-item.buttonitem {

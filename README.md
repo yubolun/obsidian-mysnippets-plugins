@@ -1,15 +1,25 @@
-# MySnippets Plugin
+[English](./README.md) | [简体中文](./README_zh.md)
 
-![MySnippets-Plugin Downloads](https://img.shields.io/github/downloads/chetachiezikeuzor/MySnippets-Plugin/total.svg)
-![MySnippets-Plugin Releases](https://img.shields.io/github/v/release/chetachiezikeuzor/MySnippets-Plugin)
+# MySnippets (Fix) Plugin
 
-<img alt="mysnippets-header" src="https://user-images.githubusercontent.com/79069364/144681107-0ff0aada-b8a7-4e0e-8e2d-945b0386ee2d.png">
+![obsidian-mysnippets-plugin Downloads](https://img.shields.io/github/downloads/yubolun/obsidian-mysnippets-plugins/total.svg)
+![obsidian-mysnippets-plugin Releases](https://img.shields.io/github/v/release/yubolun/obsidian-mysnippets-plugins)
 
-### Status: This plugin is currently available in the Obsidian plugin store
+**Version**: 2.0.0  
+**Author**: MachineYu (Original plugin by Chetachi)
 
-Remember that one time, where you were trying to test out a few cool and new snippets? Oh, but you had to constantly, go back and forth between workspace and settings tab just to toggle them on and off. Been there, done that… but wait! What if you could… I dunno… have your snippets right there in front of you? What if you could toggle your snippets on and off from the comfort of your workspace? That'd be super cool, right? I know! Well, you've come to the right place!
+MySnippets is an Obsidian plugin that adds a status bar menu allowing the user to quickly manage their CSS snippets within the comfort of their workspace 🖌. This updated "Fix" version makes the plugin fully compatible with the latest versions of Obsidian and adds several new features!
 
-MySnippets is a plugin that adds a status bar menu allowing the user to quickly manage their snippets within the comfort of their workspace 🖌. This plugin makes managing snippets a breeze with a beautiful mini menu that shows up with a click of a button!
+## Features
+
+- **Quick Toggle Menu**: A beautifully designed, glass-morphic popover menu triggered right from your status bar.
+- **Enable/Disable Snippets**: Toggle your snippets on and off with a single click.
+- **Quick Edit**: Click the `</>` button next to any snippet to instantly open the CSS file in your default editor.
+- **Action Bar**:
+  - 🔄 **Reload Snippets**: Instantly reload your snippets without opening the Obsidian settings.
+  - 📁 **Open Folder**: Open your hidden `.obsidian/snippets` directory.
+  - ➕ **Create Snippet**: Write new CSS and save it directly from a modal within Obsidian.
+  - 🗑️ **Delete Snippet**: *[NEW]* Easily delete snippets straight from a search modal—no more navigating to hidden folders manually.
 
 ## Demo
 
@@ -21,7 +31,7 @@ MySnippets is a plugin that adds a status bar menu allowing the user to quickly 
 
 We all love hacking away at Obsidian with a bunch of different snippets, but I'm willing to bet that most of us don't like having to trigger and re-trigger the settings tab just to get to our snippets. With MySnippets, we can finally access our snippets and toggle them on and off easily! Think of it as a condensed and tucked away version of the "CSS Snippets" section in the settings tab. I don't know about you, but when I want to edit my snippets, I don't want to have to rummage through the settings tab just to get to them! It can be distracting, a time waster, and just overall annoying! So let's end the era of `Settings > Appearance > CSS Snippets` and welcome the new era of <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"><path d="M5.764 8l-.295-.73a1 1 0 0 1 .553-1.302l9.272-3.746a1 1 0 0 1 1.301.552l5.62 13.908a1 1 0 0 1-.553 1.302L12.39 21.73a1 1 0 0 1-1.302-.553L11 20.96V21H7a1 1 0 0 1-1-1v-.27l-3.35-1.353a1 1 0 0 1-.552-1.302L5.764 8zM8 19h2.209L8 13.533V19zm-2-6.244l-1.673 4.141L6 17.608v-4.852zm1.698-5.309l4.87 12.054l7.418-2.997l-4.87-12.053l-7.418 2.996zm2.978 2.033a1 1 0 1 1-.749-1.855a1 1 0 0 1 .75 1.855z" fill="currentColor"/></svg> ← _Click_!
 
-<img src="https://raw.githubusercontent.com/chetachiezikeuzor/MySnippets-Plugin/master/assets/configureSnippets.png" width="280px">
+<img src="https://raw.githubusercontent.com/yubolun/obsidian-mysnippets-plugins/master/assets/configureSnippets.png" width="280px">
 
 ## How it Works
 
@@ -39,7 +49,7 @@ You can also use the button to open your snippet with your default application f
 
 On Mac, you can change your default application by right-clicking on any CSS file, then click "Get info." Then, Go to the "Open with" section and choose the application you'd like to use. Use the "Change All..." button to set this application as your default application to open CSS files.
 
-<img src="https://raw.githubusercontent.com/chetachiezikeuzor/MySnippets-Plugin/master/assets/defaultApp.png" style="box-shadow: 0 2px 8px 0 var(--background-modifier-border); border-radius: 8px;">
+<img src="https://raw.githubusercontent.com/yubolun/obsidian-mysnippets-plugins/master/assets/defaultApp.png" style="box-shadow: 0 2px 8px 0 var(--background-modifier-border); border-radius: 8px;">
 
 With MySnippets, you can change the design aesthetic. You can choose to have a "glass" style for MySnippets within the settings tab, which gives it a unique and futuristic look!
 
@@ -49,48 +59,36 @@ With MySnippets, you can change the design aesthetic. You can choose to have a "
 
 ### Create New CSS Snippets
 
-Version [1.1.0](https://github.com/chetachiezikeuzor/MySnippets-Plugin/releases/tag/1.1.0) now adds the functionality to create new CSS snippets using a modal. All you have to do is provide the name of the file and the file contents. You can also set a template for your new snippets within the settings tab. There are settings added that allow you to decide whether or not you want your new snippets to open automatically after creating them, and whether you want your snippets to be automatically toggled on after creating them.
-
 <img alt="create-css-snippet" src="https://user-images.githubusercontent.com/79069364/144666473-1d1b40d1-9336-48b8-9de6-d2ddca651f1b.gif" style="box-shadow: 0 2px 8px 0 var(--background-modifier-border); border-radius: 8px;">
+
 
 ## Installation
 
-This plugin is now available in the community plugin store. You can install it from there and enable it. For a manual installation, you can download the necessary files and place them within your plugins folder.
+This is an updated, modernized version of the original MySnippets plugin.
 
----
+### Manual Installation
+1. Go to the [Releases](https://github.com/yubolun/obsidian-mysnippets-plugins/releases) page.
+2. Download the `main.js`, `manifest.json`, and `styles.css` from the latest release.
+3. In your vault, navigate to `.obsidian/plugins/` and create a folder named `obsidian-mysnippets-plugins`.
+4. Place the downloaded files in that folder.
+5. Reload Obsidian and enable the plugin in Community Plugins.
 
 ## Changelog
 
-### [1.1.0](https://github.com/chetachiezikeuzor/MySnippets-Plugin/releases/tag/1.1.0) - Dec 4, 2021
+### 2.0.0 (Fix Update)
+- **UI Overhaul**: Rebuilt the status bar menu into a modern custom popover to comply with new Obsidian API constraints.
+- **Fixed Compatibility**: Resolved issues where the menu wouldn't open on Obsidian 1.15+.
+- **Delete Snippet Feature**: Added a new trash button to quickly search and delete snippets right from the vault.
+- **Aesthetics**: Native Obsidian button styling with accent-colored toggles and icons. Hover tooltips added for long snippet names.
 
-##### Added
-
-- Create new CSS snippets function
-  <img alt="create-css-snippet" src="https://user-images.githubusercontent.com/79069364/144666473-1d1b40d1-9336-48b8-9de6-d2ddca651f1b.gif" style="box-shadow: 0 2px 8px 0 var(--background-modifier-border); border-radius: 8px;">
-
-##### Fixed
-
-- MySnippets menu positioning is now dependent on window coordinates (solves issue with hidden status bar).
-
----
-
-## Checklist
-
-- [x] Command to open snippets menu
-- [x] Create new CSS snippets function
-
----
+## Credits & Support
+Original plugin created with ❤️ by [Chetachi](https://github.com/chetachiezikeuzor).  
+This `Fix` version is maintained and updated by MachineYu to keep this wonderful tool alive for modern Obsidian users!
 
 ## Support
 
-If you like this plugin and are considering donating to support continued development, use the button below!
+If you find this plugin helpful and want to support its continued development, consider buying me a coffee!
 
-Created with ❤️ by Chetachi
+<a href="https://www.buymeacoffee.com/yubolun" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
-<a href="https://www.buymeacoffee.com/chetachi"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&amp;emoji=&amp;slug=chetachi&amp;button_colour=e3e7ef&amp;font_colour=262626&amp;font_family=Poppins&amp;outline_colour=262626&amp;coffee_colour=ff0000"></a>
-
-<a href="https://paypal.me/chelseaezikeuzor">
-<img src="https://raw.githubusercontent.com/chetachiezikeuzor/MySnippets-Plugin/master/assets/paypal.svg" height="70"></a>
-<br/>
-<a href="https://ko-fi.com/chetachi">
-<img src="https://raw.githubusercontent.com/chetachiezikeuzor/MySnippets-Plugin/master/assets/kofi_color.svg" height="50"></a>
+<a href="https://github.com/sponsors/yubolun" target="_blank"><img src="https://img.shields.io/badge/Sponsor-GitHub-ea4aaa?style=for-the-badge&logo=github" alt="GitHub Sponsors"></a>

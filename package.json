@@ -1,6 +1,6 @@
 {
-  "name": "mysnippets-plugin",
-  "version": "0.12.0",
+  "name": "MySnippets (Fix)",
+  "version": "2.0.0",
   "description": "MySnippets is a plugin that adds a status bar menu allowing the user to quickly manage their snippets within the comfort of their workspace 🖌.",
   "main": "main.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build": "rollup --config rollup.config.js --environment BUILD:production"
   },
   "keywords": [],
-  "author": "",
+  "author": "MachineYu",
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^18.0.0",
@@ -16,7 +16,7 @@
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/node": "^14.14.37",
     "@types/sortablejs": "^1.10.7",
-    "obsidian": "^0.15.3",
+    "obsidian": "^1.12.3",
     "rollup": "^2.32.1",
     "tslib": "^2.2.0",
     "typescript": "^4.2.4"
