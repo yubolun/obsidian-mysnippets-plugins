@@ -5,7 +5,7 @@
 ![obsidian-mysnippets-plugin Downloads](https://img.shields.io/github/downloads/yubolun/obsidian-mysnippets-plugins/total.svg)
 ![obsidian-mysnippets-plugin Releases](https://img.shields.io/github/v/release/yubolun/obsidian-mysnippets-plugins)
 
-**版本**: 2.0.0  
+**版本**: 2.0.1  
 **作者**: MachineYu (原作者 Chetachi)
 
 MySnippets 是一款能在 Obsidian 状态栏添加快捷菜单的插件，让你在工作区内就能极其方便地管理所有的 CSS 代码段 (Snippets) 🖌。这个“修复版”不仅让插件完美兼容了最新版本的 Obsidian，还加入了一些实用新特性！
@@ -75,6 +75,9 @@ MySnippets 会在你的工作区状态栏上添加一个可爱的小图标。你
 5. 重启 Obsidian，并在“第三方插件”设置中启用它。
 
 ## 更新日志
+
+### 2.0.1
+- **UI 优化**: 全新设计的“毛玻璃菜单特效”（玻璃态效果）。现在，当在设置中开启该效果时，悬浮菜单将呈现带有明显渐变和彩色边框的高级半透明设计，极大改善了之前在纯白背景下模糊效果不明显的问题。
 
 ### 2.0.0 (修复与升级)
 - **UI 架构重构**: 为了兼容新版 Obsidian，摒弃了原生的受限菜单 API，纯代码手工打造了一个与原生菜单体验完全一致的自定义悬浮气泡框。

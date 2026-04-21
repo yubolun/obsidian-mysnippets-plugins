@@ -5,7 +5,7 @@
 ![obsidian-mysnippets-plugin Downloads](https://img.shields.io/github/downloads/yubolun/obsidian-mysnippets-plugins/total.svg)
 ![obsidian-mysnippets-plugin Releases](https://img.shields.io/github/v/release/yubolun/obsidian-mysnippets-plugins)
 
-**Version**: 2.0.0  
+**Version**: 2.0.1  
 **Author**: MachineYu (Original plugin by Chetachi)
 
 MySnippets is an Obsidian plugin that adds a status bar menu allowing the user to quickly manage their CSS snippets within the comfort of their workspace 🖌. This updated "Fix" version makes the plugin fully compatible with the latest versions of Obsidian and adds several new features!
@@ -74,6 +74,9 @@ This is an updated, modernized version of the original MySnippets plugin.
 5. Reload Obsidian and enable the plugin in Community Plugins.
 
 ## Changelog
+
+### 2.0.1
+- **UI Improvement**: Redesigned the "Glassmorphism aesthetic" menu style. Now, when enabled in settings, the popover menu features a premium semi-transparent design with a distinct gradient and colored border, greatly improving visibility on solid backgrounds.
 
 ### 2.0.0 (Fix Update)
 - **UI Overhaul**: Rebuilt the status bar menu into a modern custom popover to comply with new Obsidian API constraints.
