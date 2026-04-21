@@ -36,13 +36,38 @@ export default function snippetsMenu(
   const menuEl = document.createElement("div");
   menuEl.addClasses(["menu", "MySnippets-statusbar-menu"]);
   
+  // Apply common positioning styles
+  const baseStyles = "position: fixed; z-index: var(--layer-menu); padding: 5px; border-radius: 6px; max-height: 70vh; overflow-y: auto;";
+  menuEl.setAttribute("style", baseStyles);
+
+  console.log("[MySnippets] aestheticStyle =", settings.aestheticStyle);
+
   if (settings.aestheticStyle) {
-    menuEl.setAttribute(
-      "style",
-      "background-color: var(--background-secondary); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); position: fixed; z-index: var(--layer-menu); padding: 5px; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid var(--background-modifier-border); max-height: 70vh; overflow-y: auto;"
-    );
+    // Remove the 'menu' class to prevent Obsidian's default .menu background from overriding
+    menuEl.removeClass("menu");
+    // Detect dark/light theme for appropriate glass color
+    const isDark = document.body.classList.contains("theme-dark");
+    const glassBg = isDark
+      ? "rgba(30, 30, 40, 0.45)"
+      : "rgba(240, 240, 255, 0.35)";
+    const borderColor = isDark
+      ? "rgba(255, 255, 255, 0.15)"
+      : "rgba(150, 130, 220, 0.25)";
+    const shadow = isDark
+      ? "0 8px 32px rgba(0, 0, 0, 0.4)"
+      : "0 8px 32px rgba(100, 80, 180, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08)";
+
+    menuEl.style.setProperty("background-color", glassBg, "important");
+    menuEl.style.setProperty("background-image", "none", "important");
+    menuEl.style.setProperty("backdrop-filter", "blur(16px) saturate(200%)", "important");
+    menuEl.style.setProperty("-webkit-backdrop-filter", "blur(16px) saturate(200%)", "important");
+    menuEl.style.setProperty("box-shadow", shadow, "important");
+    menuEl.style.setProperty("border", "1px solid " + borderColor, "important");
+    menuEl.style.setProperty("border-radius", "12px", "important");
   } else {
-    menuEl.setAttribute("style", "position: fixed; z-index: var(--layer-menu); padding: 5px; border-radius: 6px; background-color: var(--background-secondary); box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 1px solid var(--background-modifier-border); max-height: 70vh; overflow-y: auto;");
+    menuEl.style.setProperty("background-color", "var(--background-secondary)");
+    menuEl.style.setProperty("box-shadow", "0 4px 10px rgba(0,0,0,0.1)");
+    menuEl.style.setProperty("border", "1px solid var(--background-modifier-border)");
   }
 
   currentSnippets.forEach((snippet: string) => {
