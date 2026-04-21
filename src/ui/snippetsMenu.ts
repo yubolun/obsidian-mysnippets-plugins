@@ -45,29 +45,25 @@ export default function snippetsMenu(
   if (settings.aestheticStyle) {
     // Remove the 'menu' class to prevent Obsidian's default .menu background from overriding
     menuEl.removeClass("menu");
-    // Detect dark/light theme for appropriate glass color
     const isDark = document.body.classList.contains("theme-dark");
-    const glassBg = isDark
-      ? "rgba(30, 30, 40, 0.45)"
-      : "rgba(240, 240, 255, 0.35)";
-    const borderColor = isDark
-      ? "rgba(255, 255, 255, 0.15)"
-      : "rgba(150, 130, 220, 0.25)";
-    const shadow = isDark
-      ? "0 8px 32px rgba(0, 0, 0, 0.4)"
-      : "0 8px 32px rgba(100, 80, 180, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08)";
 
-    menuEl.style.setProperty("background-color", glassBg, "important");
-    menuEl.style.setProperty("background-image", "none", "important");
+    if (isDark) {
+      menuEl.style.setProperty("background", "linear-gradient(135deg, rgba(60,40,100,0.75) 0%, rgba(20,20,50,0.85) 100%)", "important");
+      menuEl.style.setProperty("border", "1px solid rgba(180,150,255,0.3)", "important");
+      menuEl.style.setProperty("box-shadow", "0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)", "important");
+    } else {
+      menuEl.style.setProperty("background", "linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(235,230,255,0.88) 100%)", "important");
+      menuEl.style.setProperty("border", "1px solid rgba(140,110,230,0.35)", "important");
+      menuEl.style.setProperty("box-shadow", "0 8px 32px rgba(100,80,200,0.18), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.9)", "important");
+    }
     menuEl.style.setProperty("backdrop-filter", "blur(16px) saturate(200%)", "important");
     menuEl.style.setProperty("-webkit-backdrop-filter", "blur(16px) saturate(200%)", "important");
-    menuEl.style.setProperty("box-shadow", shadow, "important");
-    menuEl.style.setProperty("border", "1px solid " + borderColor, "important");
-    menuEl.style.setProperty("border-radius", "12px", "important");
+    menuEl.style.setProperty("border-radius", "14px", "important");
   } else {
     menuEl.style.setProperty("background-color", "var(--background-secondary)");
     menuEl.style.setProperty("box-shadow", "0 4px 10px rgba(0,0,0,0.1)");
     menuEl.style.setProperty("border", "1px solid var(--background-modifier-border)");
+    menuEl.style.setProperty("border-radius", "6px");
   }
 
   currentSnippets.forEach((snippet: string) => {
